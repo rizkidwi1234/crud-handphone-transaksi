@@ -1,12 +1,12 @@
 <div align="center">
 
-# 📱 Aplikasi CRUD Handphone
+# 📱 Aplikasi CRUD Handphone & Transaksi
 
 ![Java](https://img.shields.io/badge/Java-17+-orange?style=for-the-badge&logo=openjdk)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 ![NetBeans](https://img.shields.io/badge/NetBeans-1B6AC6?style=for-the-badge&logo=apache-netbeans-ide&logoColor=white)
 
-Aplikasi desktop berbasis **Java** untuk mengelola data handphone menggunakan **JDBC** dan **MySQL**.
+Aplikasi desktop berbasis **Java Swing** yang digunakan untuk mengelola data handphone dan transaksi penjualan menggunakan **JDBC** dan **MySQL**.
 
 </div>
 
@@ -14,29 +14,47 @@ Aplikasi desktop berbasis **Java** untuk mengelola data handphone menggunakan **
 
 # 📖 Deskripsi
 
-Aplikasi CRUD Handphone merupakan aplikasi desktop yang dibuat menggunakan Java dengan IDE NetBeans. Aplikasi ini menerapkan konsep **Create, Read, Update, Delete (CRUD)** serta terhubung ke database MySQL menggunakan **JDBC (Java Database Connectivity)**.
+Aplikasi CRUD Handphone & Transaksi merupakan aplikasi desktop yang dibuat menggunakan Java Swing dengan database MySQL. Aplikasi ini menerapkan konsep CRUD (Create, Read, Update, Delete) untuk mengelola data handphone dan transaksi penjualan.
 
-Aplikasi ini bertujuan untuk mempermudah pengelolaan data handphone seperti menambah, mengubah, menghapus, dan mencari data secara efisien.
+Project ini dibuat sebagai tugas UAS mata kuliah Pemrograman Java dengan tujuan mengimplementasikan Java Desktop, JDBC, dan MySQL.
 
 ---
 
 # ✨ Fitur
 
-- ✅ Menampilkan data handphone
-- ➕ Menambah data handphone
-- ✏️ Mengubah data handphone
-- ❌ Menghapus data handphone
-- 🔍 Pencarian data handphone
-- 🗄️ Terhubung dengan database MySQL menggunakan JDBC
+## 📱 Data Handphone
+
+- Menampilkan data handphone
+- Menambah data handphone
+- Mengubah data handphone
+- Menghapus data handphone
+- Fitur pencarian (Search)
+- Filter tabel
+- Pilihan kolom tabel
+- Validasi tambah, edit, dan hapus data
+- Data handphone yang sudah memiliki transaksi tidak dapat dihapus
+
+## 💳 Data Transaksi
+
+- Menampilkan data transaksi
+- Menambah transaksi
+- Mengubah transaksi
+- Menghapus transaksi
+- Filter tabel
+- Pilihan kolom tabel
+- Kode handphone dipilih, nama dan harga otomatis terisi
+- Total harga dihitung otomatis (Harga × Jumlah)
+- Validasi jumlah pembelian tidak boleh melebihi stok handphone
 
 ---
 
 # 🛠️ Teknologi
 
 - Java
-- NetBeans IDE
+- Java Swing
 - JDBC
 - MySQL
+- NetBeans IDE
 - XAMPP
 
 ---
@@ -44,62 +62,39 @@ Aplikasi ini bertujuan untuk mempermudah pengelolaan data handphone seperti mena
 # 📂 Struktur Project
 
 ```text
-UAS4_CRUD_HP/
-│
-├── src/                 # Source Code Java
-├── database/            # Database SQL
-├── lib/                 # JDBC Driver
-├── nbproject/           # Konfigurasi NetBeans
+crud-handphone-transaksi/
+├── build/
+├── database/
+├── lib/
+├── nbproject/
+├── src/
 ├── build.xml
-└── manifest.mf
+├── manifest.mf
+└── README.md
 ```
 
 ---
 
 # ⚙️ Cara Menjalankan
 
-### 1. Clone Repository
+1. Clone repository.
 
 ```bash
-git clone https://github.com/rizkidwi1234/jual-beli-handphone.git
+git clone https://github.com/rizkidwi1234/crud-handphone-transaksi.git
 ```
 
-### 2. Import Database
+2. Import database `database/db_handphone.sql`.
 
-- Jalankan XAMPP.
-- Aktifkan Apache dan MySQL.
-- Buka phpMyAdmin.
-- Buat database:
+3. Tambahkan MySQL Connector (JDBC) ke project NetBeans jika belum tersedia.
 
-```sql
-db_handphone
-```
-
-- Import file:
-
-```
-database/db_handphone.sql
-```
-
-### 3. Tambahkan Library JDBC
-
-Pastikan file JDBC Driver sudah tersedia pada folder:
-
-```
-lib/
-```
-
-Jika belum, tambahkan **mysql-connector-j** ke Libraries pada NetBeans.
-
-### 4. Jalankan Project
-
-Buka project menggunakan NetBeans kemudian klik **Run Project**.
+4. Jalankan project melalui NetBeans IDE.
 
 ---
 
-# 📸 Tampilan Aplikasi
+# 📸 Screenshot
 
-Tambahkan screenshot aplikasi di sini (Opsional).
+- Data Handphone
+- Data Transaksi
 
 ---
 
@@ -107,13 +102,8 @@ Tambahkan screenshot aplikasi di sini (Opsional).
 
 **Rizki Dwi Santoso**
 
+Mahasiswa Teknik Informatika  
+STMIK Mardira Indonesia — Semester 4
+
 GitHub:
 https://github.com/rizkidwi1234
-
----
-
-<div align="center">
-
-⭐ Terima kasih telah mengunjungi repository ini.
-
-</div>
